@@ -24,39 +24,39 @@ var computerScore = 0
 function playRound(playerChoice, computerChoice) {
 
     if (playerChoice.toLowerCase() == computerChoice) {
-        return 'Tie, please play again.'
+        return alert('Tie, please play again.')
     }
   switch(playerChoice.toLowerCase()){
       case "rock":
       if (computerChoice == "paper"){
           computerScore++;
-          return "You lose. Paper covers rock. Computer score:" + computerScore;
+          return alert("You lose. Paper covers rock. Computer score:" + computerScore);
       }
       else {
           playerScore++;
-          return "You win. Rock beats scissors. Player score:" + playerScore;
+          return alert("You win. Rock beats scissors. Player score:" + playerScore);
       }
       break;
 
       case "paper":
       if (computerChoice == "scissors") {
           computerScore++;
-          return "You lose. Scissors cuts paper. Computer score:" + computerScore;
+          return alert("You lose. Scissors cuts paper. Computer score:" + computerScore);
       }
       else {
           playerScore++;
-          return "You win. Paper covers rock. Player score:" + playerScore;
+          return alert("You win. Paper covers rock. Player score:" + playerScore);
       }
       break;
 
       case "scissors":
       if(computerChoice == "rock"){
           computerScore++;
-          return "You lose. Rock beats scissors. Computer score" + computerScore;
+          return alert("You lose. Rock beats scissors. Computer score" + computerScore);
       }
       else {
           playerScore++;
-          return "You win. Scissors cuts paper. Player score:" + playerScore;
+          return alert("You win. Scissors cuts paper. Player score:" + playerScore);
       }
       break;
   }
@@ -70,8 +70,7 @@ function Game(){
     let computerChoice = computerPlay()
     console.log(playRound(playerChoice, computerChoice))
     }
-    return "Final Player Score:" + playerScore;
-    return "Final Computer Score:" + computerScore;
+     alert("Final Player Score:" + playerScore + " Final Computer Score:" + computerScore);
 
    
 }

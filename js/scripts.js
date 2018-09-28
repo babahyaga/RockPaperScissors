@@ -30,11 +30,10 @@ function playRound(playerChoice, computerChoice) {
       case "rock":
       if (computerChoice == "paper"){
           computerScore++;
-          return alert("You lose. Paper covers rock. Computer score:" + computerScore);
       }
       else {
           playerScore++;
-          return alert("You win. Rock beats scissors. Player score:" + playerScore);
+          return playerScore;
       }
       break;
 
@@ -62,6 +61,7 @@ function playRound(playerChoice, computerChoice) {
   }
   
 }
+
 
 function Game(){
    
